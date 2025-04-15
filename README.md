@@ -1,7 +1,7 @@
 
-# 🚀 Node.js + Express REST API Boilerplate
+# 🚀 Node.js + Express + MongoDB REST API
 
-A lightweight and simple boilerplate to kickstart your backend REST API development using **Node.js** and **Express**.
+Backend REST API development using **Node.js**, **Express**, and **MongoDB**.
 
 ---
 
@@ -9,6 +9,7 @@ A lightweight and simple boilerplate to kickstart your backend REST API developm
 
 - **Node.js**
 - **Express**
+- **MongoDB**
 - **dotenv**
 - **nodemon** (for development)
 
@@ -19,14 +20,8 @@ A lightweight and simple boilerplate to kickstart your backend REST API developm
 ### 📁 Project Setup
 
 ```bash
-# Initialize project
-npm init
-
 # Install dependencies
-npm install express dotenv
-
-# Install dev dependencies
-npm install -D nodemon
+npm install
 ```
 
 ### 📄 Configuration
@@ -42,6 +37,7 @@ With the following content:
 ```env
 PORT=5000
 NODE_ENV=development
+MONGO_URI=mongodb://<your-host-name>:27017/<your-db-name>
 ```
 
 ---
@@ -56,11 +52,11 @@ Make sure your `package.json` has the following script:
 
 ```json
 "scripts": {
-  "dev": "nodemon server.js"
+  "dev": "nodemon server"
 }
 ```
 
-Replace `server.js` with your actual entry point file if it's different.
+Replace `server` with your actual entry point file if it's different.
 
 ---
 
@@ -79,11 +75,5 @@ project-root/
 ├── server.js
 └── README.md
 ```
-
----
-
-## 📌 Notes
-
-- You can extend this boilerplate with middleware, error handling, authentication, etc.
 
 ---
