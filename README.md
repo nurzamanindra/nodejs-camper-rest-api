@@ -3,6 +3,8 @@
 
 Backend REST API development using **Node.js**, **Express**, and **MongoDB**.
 
+> 🚧 This project is currently under active development. Features are being built and improved continuously. Stay tuned!
+
 ---
 
 ## 📦 Tech Stack
@@ -77,3 +79,16 @@ project-root/
 ```
 
 ---
+
+## 📮 API Documentation
+
+This project provides a Postman collection to easily test all REST API endpoints.
+
+- 📂 Postman Collection: [`_docs/local-dev.devcamper-api.postman_collection.json`](._docs/local-dev.devcamper-api.postman_collection.json)
+- ⚙️ Postman Environment: [`_docs/local-dev.devcamper-api.postman_environment.json`](./_docs/local-dev.devcamper-api.postman_environment.json)
+- 📘 Full API Reference: [`API.md`](./API.md)
+
+To use it:
+1. Open Postman.
+2. Click **Import** → Select the `.json` file.
+3. Set the base URL and environment (if needed).
