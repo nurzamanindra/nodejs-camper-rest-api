@@ -1,0 +1,422 @@
+{
+	"info": {
+		"_postman_id": "1ac5527f-2e48-4fd2-98a8-939b950d3047",
+		"name": "NodeJsMongo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3315816"
+	},
+	"item": [
+		{
+			"name": "Bootcamps",
+			"item": [
+				{
+					"name": "Get All Bootcamps",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Bootcamps",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/bootcamps",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bootcamps"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2549"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9f5-UF0z4pzSnqlCneh+6EA1lU+PuwM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Apr 2025 00:36:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"count\": 3,\n    \"data\": [\n        {\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -71.5255193,\n                    41.4837551\n                ],\n                \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n                \"street\": \"Upper College Road\",\n                \"city\": \"South Kingstown\",\n                \"state\": \"US\",\n                \"zipcode\": \"02881\",\n                \"country\": \"US\"\n            },\n            \"_id\": \"680191544001d1dc66ebf1ee\",\n            \"name\": \"Devcentral Bootcamp\",\n            \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n            \"website\": \"https://devcentral.com\",\n            \"phone\": \"(444) 444-4444\",\n            \"email\": \"enroll@devcentral.com\",\n            \"careers\": [\n                \"Mobile Development\",\n                \"Web Development\",\n                \"Data Science\",\n                \"Business\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": true,\n            \"acceptGi\": true,\n            \"createdAt\": \"2025-04-17T23:40:04.010Z\",\n            \"slug\": \"devcentral-bootcamp\",\n            \"__v\": 0\n        },\n        {\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -71.5255193,\n                    41.4837551\n                ],\n                \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n                \"street\": \"Upper College Road\",\n                \"city\": \"South Kingstown\",\n                \"state\": \"US\",\n                \"zipcode\": \"02881\",\n                \"country\": \"US\"\n            },\n            \"_id\": \"68019e953ab13895e8d00e44\",\n            \"name\": \"Test 01 Bootcamp\",\n            \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n            \"website\": \"https://devcentral.com\",\n            \"phone\": \"(444) 444-4444\",\n            \"email\": \"enroll@devcentral.com\",\n            \"careers\": [\n                \"Mobile Development\",\n                \"Web Development\",\n                \"Data Science\",\n                \"Business\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": true,\n            \"acceptGi\": true,\n            \"createdAt\": \"2025-04-18T00:36:37.332Z\",\n            \"slug\": \"test-01-bootcamp\",\n            \"__v\": 0\n        },\n        {\n            \"location\": {\n                \"type\": \"Point\",\n                \"coordinates\": [\n                    -71.5255193,\n                    41.4837551\n                ],\n                \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n                \"street\": \"Upper College Road\",\n                \"city\": \"South Kingstown\",\n                \"state\": \"US\",\n                \"zipcode\": \"02881\",\n                \"country\": \"US\"\n            },\n            \"_id\": \"68019ea13ab13895e8d00e46\",\n            \"name\": \"Test 02 Bootcamp\",\n            \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n            \"website\": \"https://devcentral.com\",\n            \"phone\": \"(444) 444-4444\",\n            \"email\": \"enroll@devcentral.com\",\n            \"careers\": [\n                \"Mobile Development\",\n                \"Web Development\",\n                \"Data Science\",\n                \"Business\"\n            ],\n            \"photo\": \"no-photo.jpg\",\n            \"housing\": false,\n            \"jobAssistance\": true,\n            \"jobGuarantee\": true,\n            \"acceptGi\": true,\n            \"createdAt\": \"2025-04-18T00:36:49.482Z\",\n            \"slug\": \"test-02-bootcamp\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Bootcamp by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/68019ea13ab13895e8d00e46",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"68019ea13ab13895e8d00e46"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Single Bootcamp by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/bootcamps/680191544001d1dc66ebf1ee",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bootcamps",
+										"680191544001d1dc66ebf1ee"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "865"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"361-IgCm6I+QkiV0RP5WlQ/4Vrtd1u0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Apr 2025 00:42:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -71.5255193,\n                41.4837551\n            ],\n            \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n            \"street\": \"Upper College Road\",\n            \"city\": \"South Kingstown\",\n            \"state\": \"US\",\n            \"zipcode\": \"02881\",\n            \"country\": \"US\"\n        },\n        \"_id\": \"680191544001d1dc66ebf1ee\",\n        \"name\": \"Devcentral Bootcamp\",\n        \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n        \"website\": \"https://devcentral.com\",\n        \"phone\": \"(444) 444-4444\",\n        \"email\": \"enroll@devcentral.com\",\n        \"careers\": [\n            \"Mobile Development\",\n            \"Web Development\",\n            \"Data Science\",\n            \"Business\"\n        ],\n        \"photo\": \"no-photo.jpg\",\n        \"housing\": false,\n        \"jobAssistance\": true,\n        \"jobGuarantee\": true,\n        \"acceptGi\": true,\n        \"createdAt\": \"2025-04-17T23:40:04.010Z\",\n        \"slug\": \"devcentral-bootcamp\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new bootcamp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\t{\r\n\t\t\"name\": \"Test 02 Bootcamp\",\r\n\t\t\"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\r\n\t\t\"website\": \"https://devcentral.com\",\r\n\t\t\"phone\": \"(444) 444-4444\",\r\n\t\t\"email\": \"enroll@devcentral.com\",\r\n\t\t\"address\": \"45 Upper College Rd Kingston RI 02881\",\r\n\t\t\"careers\": [\r\n\t\t\t\"Mobile Development\",\r\n\t\t\t\"Web Development\",\r\n\t\t\t\"Data Science\",\r\n\t\t\t\"Business\"\r\n\t\t],\r\n\t\t\"housing\": false,\r\n\t\t\"jobAssistance\": true,\r\n\t\t\"jobGuarantee\": true,\r\n\t\t\"acceptGi\": true\r\n\t}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create new bootcamp",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\t{\r\n\t\t\"name\": \"Test 03 Bootcamp\",\r\n\t\t\"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\r\n\t\t\"website\": \"https://devcentral.com\",\r\n\t\t\"phone\": \"(444) 444-4444\",\r\n\t\t\"email\": \"enroll@devcentral.com\",\r\n\t\t\"address\": \"45 Upper College Rd Kingston RI 02881\",\r\n\t\t\"careers\": [\r\n\t\t\t\"Mobile Development\",\r\n\t\t\t\"Web Development\",\r\n\t\t\t\"Data Science\",\r\n\t\t\t\"Business\"\r\n\t\t],\r\n\t\t\"housing\": false,\r\n\t\t\"jobAssistance\": true,\r\n\t\t\"jobGuarantee\": true,\r\n\t\t\"acceptGi\": true\r\n\t}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/bootcamps",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bootcamps"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "859"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35b-pNfau4sbiwYPqa6e2minebxCAWo\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Apr 2025 00:42:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"name\": \"Test 03 Bootcamp\",\n        \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n        \"website\": \"https://devcentral.com\",\n        \"phone\": \"(444) 444-4444\",\n        \"email\": \"enroll@devcentral.com\",\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -71.5255193,\n                41.4837551\n            ],\n            \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n            \"street\": \"Upper College Road\",\n            \"city\": \"South Kingstown\",\n            \"state\": \"US\",\n            \"zipcode\": \"02881\",\n            \"country\": \"US\"\n        },\n        \"careers\": [\n            \"Mobile Development\",\n            \"Web Development\",\n            \"Data Science\",\n            \"Business\"\n        ],\n        \"photo\": \"no-photo.jpg\",\n        \"housing\": false,\n        \"jobAssistance\": true,\n        \"jobGuarantee\": true,\n        \"acceptGi\": true,\n        \"_id\": \"68019ff77c30d0c27e79ae67\",\n        \"createdAt\": \"2025-04-18T00:42:31.059Z\",\n        \"slug\": \"test-03-bootcamp\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update bootcamp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"update.email@update.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/68019ea13ab13895e8d00e46",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"68019ea13ab13895e8d00e46"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update bootcamp",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"update.email@update.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{URL}}/api/v1/bootcamps/68019ff77c30d0c27e79ae67",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bootcamps",
+										"68019ff77c30d0c27e79ae67"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "861"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"35d-WfHeirKZmrr00NKtyY5OanSAICc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Apr 2025 00:42:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"location\": {\n            \"type\": \"Point\",\n            \"coordinates\": [\n                -71.5255193,\n                41.4837551\n            ],\n            \"formattedAddress\": \"University of, 45 Upper College Rd, Kingston, RI 02881, USA\",\n            \"street\": \"Upper College Road\",\n            \"city\": \"South Kingstown\",\n            \"state\": \"US\",\n            \"zipcode\": \"02881\",\n            \"country\": \"US\"\n        },\n        \"_id\": \"68019ff77c30d0c27e79ae67\",\n        \"name\": \"Test 03 Bootcamp\",\n        \"description\": \"Is coding your passion? Codemasters will give you the skills and the tools to become the best developer possible. We specialize in front end and full stack web development\",\n        \"website\": \"https://devcentral.com\",\n        \"phone\": \"(444) 444-4444\",\n        \"email\": \"update.email@update.com\",\n        \"careers\": [\n            \"Mobile Development\",\n            \"Web Development\",\n            \"Data Science\",\n            \"Business\"\n        ],\n        \"photo\": \"no-photo.jpg\",\n        \"housing\": false,\n        \"jobAssistance\": true,\n        \"jobGuarantee\": true,\n        \"acceptGi\": true,\n        \"createdAt\": \"2025-04-18T00:42:31.059Z\",\n        \"slug\": \"test-03-bootcamp\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete bootcamp",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/api/v1/bootcamps/68019ea13ab13895e8d00e46",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bootcamps",
+								"68019ea13ab13895e8d00e46"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete bootcamp",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{URL}}/api/v1/bootcamps/68019ff77c30d0c27e79ae67",
+									"host": [
+										"{{URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"bootcamps",
+										"68019ff77c30d0c27e79ae67"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-pIPrt4esgEyEkX/w62Rnrj9XXdg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 18 Apr 2025 00:42:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {}\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
