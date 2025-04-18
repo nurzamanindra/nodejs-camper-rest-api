@@ -84,7 +84,7 @@ project-root/
 
 This project provides a Postman collection to easily test all REST API endpoints.
 
-- 📂 Postman Collection: [`_docs/local-dev.devcamper-api.postman_collection.json`](._docs/local-dev.devcamper-api.postman_collection.json)
+- 📂 Postman Collection: [`_docs/local-dev.devcamper-api.postman_collection.json`](./_docs/local-dev.devcamper-api.postman_collection.json)
 - ⚙️ Postman Environment: [`_docs/local-dev.devcamper-api.postman_environment.json`](./_docs/local-dev.devcamper-api.postman_environment.json)
 - 📘 Full API Reference: [`API.md`](./API.md)
 
