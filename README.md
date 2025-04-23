@@ -3,8 +3,9 @@
 
 Backend REST API development using **Node.js**, **Express**, and **MongoDB**.
 
-> 🚧 This project is currently under active development. Features are being built and improved continuously. Stay tuned!
-
+> This project is currently under active development. Features are being built and improved continuously. Stay tuned!
+>
+> This API uses an external maps API to convert addresses into geocode points and vice versa. I use the Google Maps API, but you can use any maps provider API you prefer (see the Configuration section).
 ---
 
 ## 📦 Tech Stack
@@ -40,6 +41,9 @@ With the following content:
 PORT=5000
 NODE_ENV=development
 MONGO_URI=mongodb://<your-host-name>:27017/<your-db-name>
+
+GEOCODER_PROVIDER=
+GEOCODER_API_KEY=
 ```
 
 ---
