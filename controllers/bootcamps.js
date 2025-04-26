@@ -9,84 +9,9 @@ const path = require('path');
 // @access    Public
 exports.getBootcamps = asyncHandler(async (req, res, next) => {
   
-  let query;
-
-  //copy req.query
-  const reqQuery = {...req.query};
-  console.log(reqQuery)
-
-  //fields to exclude 
-  const removeFields = ['select', 'sort', 'page', 'limit'];
-
-  //loop over removeFields and delete them from reqQuery
-  removeFields.forEach(param => delete reqQuery[param]);
-
-  //create query string 
-  let queryStr = JSON.stringify(reqQuery);
-
-  //create operator $gt , $gte, ...
-  queryStr = queryStr.replace(/\b(gt|gte|lt|lte|in)\b/g, match => `$${match}`);
-
-  //find resource
-  query = Bootcamp.find(JSON.parse(queryStr)).populate('courses');
-
-  //construct select field 
-  if(req.query.select){
-    //will result something like this:
-    //from : ?select=name,desc,housing --> 'name desc housing'
-    const fields = req.query.select.split(',').join(' ');
-
-    query = query.select(fields);
-  }
-
-  if(req.query.sort){
-    const sortBy = req.query.sort.split(',').join(' ');
-    query = query.sort(sortBy);
-
-  } else {
-    query.sort('-createdAt');
-  }
-
-  //pagination
-  const page = parseInt(req.query.page, 10) || 1;
-  const limit = parseInt(req.query.limit, 10) || 25;
-  const startIndex = (page - 1) * limit;
-  const endIndex = page * limit;
-
-  const total = await Bootcamp.countDocuments();
-
-  //construct pagination query
-  query.skip(startIndex).limit(limit);
-
-  //exec the query builder
-  const bootcamps = await query;
-
-  //construct pagination object for response
-  const pagination = {};
-  
-  //next page
-  if(endIndex < total) {
-    pagination.next = {
-      page: page + 1,
-      limit
-    }
-  }
-
-  //prev page
-  if(startIndex > 0) {
-    pagination.prev = {
-      page : page - 1,
-      limit
-    }
-  }
-
   res
     .status(200)
-    .json({ 
-      success: true, 
-      count: bootcamps.length, 
-      pagination,
-      data: bootcamps });
+    .json(res.advancedResults);
 });
 
 // @desc      Get single bootcamp
@@ -232,7 +157,7 @@ exports.bootcampUploadPhoto = asyncHandler(async (req, res, next) => {
       success: true,
       data: file.name
     });
-    
+
   });
 
 });
