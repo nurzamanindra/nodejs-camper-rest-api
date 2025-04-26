@@ -44,6 +44,9 @@ MONGO_URI=mongodb://<your-host-name>:27017/<your-db-name>
 
 GEOCODER_PROVIDER=
 GEOCODER_API_KEY=
+
+MAX_FILE_UPLOAD=1000000
+FILE_UPLOAD_PATH=./public/uploads
 ```
 
 ---
