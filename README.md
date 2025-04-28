@@ -47,6 +47,9 @@ GEOCODER_API_KEY=
 
 MAX_FILE_UPLOAD=1000000
 FILE_UPLOAD_PATH=./public/uploads
+
+JWT_SECRET=ldsfjldskfjdslfjlsdfkjdsl
+JWT_EXPIRE=20d
 ```
 
 ---
