@@ -51,6 +51,14 @@ FILE_UPLOAD_PATH=./public/uploads
 JWT_SECRET=ldsfjldskfjdslfjlsdfkjdsl
 JWT_EXPIRE=20d
 JWT_COOKIE_EXPIRE=20
+
+
+SMTP_HOST=
+SMTP_PORT=
+SMTP_EMAIL=
+SMTP_PASSWORD=
+FROM_EMAIL=noreplay@gmail.com
+FROM_NAME=noreplay
 ```
 
 ---
