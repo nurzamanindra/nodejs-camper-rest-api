@@ -2,6 +2,7 @@ const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
 const User = require('../models/User');
 const sendEmail = require('../utils/sendEmail');
+const crypto = require('crypto');
 
 // @desc      Register user
 // @route     POST /api/v1/auth/register
@@ -118,6 +119,105 @@ exports.forgotPassword = asyncHandler(async (req, res, next) => {
     data: user
   });
 });
+
+// @desc      Reset Password
+// @route     PUT /api/v1/auth/resetpassword/:resettoken
+// @access    Public
+exports.resetPassword = asyncHandler(async (req, res, next) => {
+
+  const resetPasswordToken = crypto.createHash('sha256').update(req.params.resettoken).digest('hex');
+
+  const user = await User.findOne({
+    resetPasswordToken,
+    resetPasswordExpire: {$gt : Date.now()}
+  });
+
+  if(!user){
+    return next(new ErrorResponse("Invalid Token", 400))
+  }
+
+  user.password = req.body.password;
+  user.resetPasswordToken = undefined;
+  user.resetPasswordExpire = undefined;
+
+  await user.save();
+
+  sendTokenResponse(user, 200, res);
+  
+});
+
+// @desc      Update User details
+// @route     PUT /api/v1/auth/updatedetails
+// @access    Private
+exports.updateDetails = asyncHandler(async (req, res, next) => {
+
+  const fieldsToUpdate = {
+    name : req.body.name,
+    email: req.body.email
+  }
+  
+  const user = await User.findByIdAndUpdate(req.user.id, fieldsToUpdate, {
+    new : true,
+    runValidators: true
+  });
+
+
+  res.status(200).json({
+    success: true,
+    data: user
+  });
+});
+
+
+// @desc      Update Password
+// @route     PUT /api/v1/auth/updatepassword
+// @access    Private
+exports.updatePassword = asyncHandler(async (req, res, next) => {
+
+  const {newPassword, currentPassword} = req.body;
+
+  const user = await User.findById(req.user.id).select("+password");
+
+  if(!(await user.matchPassword(currentPassword))){
+    return next(new ErrorResponse("Password is Incorrect", 401));
+  }
+
+  user.password = newPassword;
+  await user.save();
+
+  sendTokenResponse(user, 200, res);
+});
+
+
+// @desc      Log user out / clear cookie
+// @route     GET /api/v1/auth/logout
+// @access    Private
+exports.logout = asyncHandler(async (req, res, next) => {
+ res.cookie('token', 'none', {
+   expires: new Date(Date.now() + 10 * 1000),
+   httpOnly: true
+ });
+
+res.status(200).json({
+   success: true,
+   data: {}
+ });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Get token from model, create cookie and send response

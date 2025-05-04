@@ -6,6 +6,9 @@ Backend REST API development using **Node.js**, **Express**, and **MongoDB**.
 > This project is currently under active development. Features are being built and improved continuously. Stay tuned!
 >
 > This API uses an external maps API to convert addresses into geocode points and vice versa. I use the Google Maps API, but you can use any maps provider API you prefer (see the Configuration section).
+>
+>This API uses nodemailer for sending email. You can use mailtrap for testing.
+>`
 ---
 
 ## 📦 Tech Stack
